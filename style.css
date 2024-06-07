@@ -1,0 +1,249 @@
+/* css resets */
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* variables */
+
+* {
+  /* ## Colors */
+
+  /* ### Primary */
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hwb(166 0% 26%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+
+  /* ### Neutral */
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* background */
+  /* ## Gradients */
+  --Light-slate-blue: hsl(252, 100%, 67%);
+  --Light-royal-blue: hsl(241, 81%, 54%);
+
+  /* circle */
+  --Violet-blue: hsla(256, 72%, 46%, 1);
+  --Persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* font */
+  --Hanken-Grotesk: "Hanken Grotesk", sans-serif;
+}
+
+.category {
+  min-width: 10rem;
+}
+
+.span {
+  color: var(--Dark-gray-blue);
+}
+
+body {
+  font-family: var(--Hanken-Grotesk);
+}
+
+p {
+  font-size: 1.8rem;
+}
+
+.value {
+  color: rgba(0, 0, 0);
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43rem;
+  margin: 10rem auto;
+  box-shadow: 0px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.percentage,
+.result-header,
+.comment {
+  color: var(--Light-lavender);
+}
+.result-info {
+  border-radius: 3rem;
+  background-color: var(--Light-royal-blue);
+  text-align: center;
+  color: var(--White);
+  /* border: 2px solid red; */
+
+  width: 50%;
+  height: 35rem;
+}
+
+.result-header {
+  margin-bottom: 0;
+  margin-top: 2rem;
+}
+.result-container {
+  background: linear-gradient(var(--Violet-blue), var(--Persian-blue));
+  border-radius: 50%;
+  width: 12rem;
+  height: 12rem;
+  position: relative;
+  top: -3rem;
+  right: -6rem;
+}
+.result {
+  font-weight: 800;
+  font-size: 6rem;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.percentage {
+  margin-top: 0;
+  padding-top: 0;
+  font-size: 1rem;
+}
+
+.remark-comment {
+  /* border: 1px solid red; */
+  position: relative;
+  top: -1rem;
+  left: -3rem;
+  text-align: center;
+}
+
+.remark {
+  font-weight: 500;
+  font-size: 2rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 0;
+  text-align: center;
+  position: relative;
+  left: 20px;
+}
+.comment {
+  position: relative;
+  left: 4rem;
+  width: 25ch;
+  /* border: 1px solid red; */
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+.summary {
+  background-color: var(--White);
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  height: 35rem;
+  /* height: 432px; */
+}
+
+.summary-p {
+  color: rgba(0, 0, 0);
+  position: relative;
+  left: -4.5rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  margin-top: 0.5rem;
+}
+.summary-container {
+}
+.summary-details {
+}
+
+.summary-details:nth-child(1) {
+}
+.summary-details:nth-child(2) {
+  border-radius: 1rem;
+  /* background-color: var(--Orangey-yellow); */
+}
+.summary-details:nth-child(3) {
+  border-radius: 1rem;
+  /* background-color: var(--Light-lavender); */
+}
+.summary-details:nth-child(4) {
+  border-radius: 1rem;
+  /* background-color: var(--Cobalt-blue); */
+}
+
+.score {
+}
+
+.score-container {
+}
+
+img {
+}
+
+button {
+  color: var(--White);
+  border: none;
+  background-color: var(--Dark-gray-blue);
+  border-radius: 2rem;
+  padding: 1em 6em;
+  margin: 0;
+}
+
+.reaction {
+  background-color: rgba(255, 87, 87, 0.1);
+  color: var(--Light-red);
+}
+
+.memory {
+  border-radius: 0.75rem;
+  background-color: rgba(255, 176, 31, 0.1);
+  color: var(--Orangey-yellow);
+}
+
+.verbal {
+  background-color: rgba(0, 189, 145, 0.1);
+}
+
+.visual {
+  background-color: rgba(17, 37, 212, 0.1);
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  border-radius: 0.75rem;
+  /* margin: 0; */
+  /* padding: 0; */
+  /* transform: translate(0.9); */
+  /* flex-shrink: 1; */
+}
+
+.icon,
+.span {
+  align-self: center;
+}
+
+@media (min-width: 50rem) {
+  .container {
+    display: flex;
+    max-width: 46.875rem;
+  }
+
+  .result-header {
+    min-width: 23rem;
+  }
+
+  .summary {
+    min-width: 18rem;
+    max-width: 23.438rem;
+  }
+}
